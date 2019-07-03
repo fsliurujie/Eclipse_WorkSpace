@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>servlet_demo</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+        <!-- Servlet注册的名字 -->
+        <servlet-name>TestServlet</servlet-name>
+        <!-- Servlet的全类名 -->
+        <servlet-class>com.test.FirstServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <!-- 需要和某一个servlet节点的servlet-name子节点的名称一致 -->
+        <servlet-name>TestServlet</servlet-name>
+        <!-- 映射具体的访问路径：/代表当前web应用的根目录 -->
+        <url-pattern>/form</url-pattern>
+    </servlet-mapping>
+</web-app>
